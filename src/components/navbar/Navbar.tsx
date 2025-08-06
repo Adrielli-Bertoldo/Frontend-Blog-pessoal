@@ -20,7 +20,7 @@ function Navbar() {
   if (usuario.token !== '') {
     navbarComponent = (
       <div
-        className="w-full flex justify-center py-4 bg-sky-900 text-white"
+        className="w-full flex justify-center py-4 bg-pink-300 text-black"
       >
         <div className="container flex justify-between text-lg">
           <Link to='/home' className="font-bold font-mono text-2xl">Blog Pessoal</Link>

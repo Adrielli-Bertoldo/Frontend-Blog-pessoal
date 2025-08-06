@@ -8,7 +8,7 @@
 }
 
 html {
-  background-color: #f1f5f9;
+  background-color: #b5e1ee;
 }
 
 h1, 
@@ -28,8 +28,8 @@ p{
 }
 
 button {
-  background-color: #1d4ed8;
-  color: white;
+  background-color: #ceadc4;
+  color: rgb(226, 208, 208);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   border: none;
@@ -51,7 +51,7 @@ li{
 span{
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1d4ed8;
+  color: #312f2f;
 }
 
 a{
@@ -106,8 +106,8 @@ input{
 }
 
 .botao{
-  background-color: #1d4ed8;
-  color: white;
+  background-color: #c04f84;
+  color: black;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   border: none;

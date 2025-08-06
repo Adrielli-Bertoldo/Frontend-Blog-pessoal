@@ -9,10 +9,10 @@ function Footer() {
 
   return (
     <>
-      <div className="flex justify-center bg-sky-900 text-white">
+      <div className="flex justify-center bg-pink-300 text-black">
         <div className="container flex flex-col items-center py-4">
           <p className="text-xl font-bold">
-            Diário de uma mãe em dobro | Copyright: {data}
+            Diário de uma mãe em dobro | Desde: {data}
           </p>
           <p className="text-lg">Feito com 💗 por Adrielli Bertoldo</p>
           {usuario.token !== '' ? (
@@ -21,7 +21,7 @@ function Footer() {
             <InstagramLogoIcon size={48} weight="bold" />
             <FacebookLogoIcon size={48} weight="bold" />
           </div>
-          ) : <><p>Loga ai, nunca te pedi nada</p></>}
+          ) : <><p>Ajuda a mãe aqui, faz esse login 😎</p></>}
         </div>
       </div>
     </>

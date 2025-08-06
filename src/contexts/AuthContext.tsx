@@ -1,18 +1,21 @@
-/* eslint-disable react-refresh/only-export-components */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { createContext, type ReactNode, useState } from "react"
 import { login } from "../services/Service"
 import type UsuarioLogin from "../model/UsuarioLogin"
 import { ToastAlerta } from "../utils/ToastAlerta"
 
-    handleLogout(): void
-    handleLogin(usuario: UsuarioLogin): Promise<void>
-    isLoading: boolean
+// Interface declarada 
+interface AuthContextProps {
+    usuario: UsuarioLogin;
+    handleLogout(): void;
+    handleLogin(usuario: UsuarioLogin): Promise<void>;
+    isLoading: boolean;
 }
+
 interface AuthProviderProps {
-    children: ReactNode
+    children: ReactNode;
 }
-export const AuthContext = createContext({} as AuthContextProps)
+
+export const AuthContext = createContext({} as AuthContextProps);
 
 export function AuthProvider({ children }: AuthProviderProps) {
 
@@ -23,19 +26,19 @@ export function AuthProvider({ children }: AuthProviderProps) {
         senha: "",
         foto: "",
         token: ""
-    })
+    });
 
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
 
     async function handleLogin(usuarioLogin: UsuarioLogin) {
-        setIsLoading(true)
+        setIsLoading(true);
         try {
-            await login(`/usuarios/logar`, usuarioLogin, setUsuario)
-            ToastAlerta("O Usuário foi autenticado com sucesso!", 'sucesso')
+            await login(`/usuarios/logar`, usuarioLogin, setUsuario);
+            ToastAlerta("O Usuário foi autenticado com sucesso!", 'sucesso');
         } catch (error) {
-            ToastAlerta("Os Dados do usuário estão inconsistentes!", 'erro')
+            ToastAlerta("Os Dados do usuário estão inconsistentes!", 'erro');
         }
-        setIsLoading(false)
+        setIsLoading(false);
     }
 
     function handleLogout() {
@@ -46,12 +49,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
             senha: "",
             foto: "",
             token: ""
-        })
+        });
     }
 
     return (
         <AuthContext.Provider value={{ usuario, handleLogin, handleLogout, isLoading }}>
             {children}
         </AuthContext.Provider>
-    )
+    );
 }

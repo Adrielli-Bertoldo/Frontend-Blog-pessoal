@@ -1,4 +1,4 @@
-import ListaPostagens from "../../components/postagens/listaPostagens/ListaPostagens";
+import ListaPostagem from "../../components/postagens/listaPostagens/ListaPostagens";
 import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem";
 
 function Home() {
@@ -16,14 +16,14 @@ function Home() {
 
           <div>
             <img
-              src="https://i.imgur.com/VpwApCU.png"
+              src="https://imgur.com/BymMphL.png"
               alt="Imagem da Página Home"
               className="w-96"
             />
           </div>
         </div>
       </div>
-      <ListaPostagens />
+      <ListaPostagem />
     </>
   );
 }

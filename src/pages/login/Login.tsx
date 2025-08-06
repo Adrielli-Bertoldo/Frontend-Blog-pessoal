@@ -36,7 +36,7 @@ function Login() {
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
         <form className="flex justify-center items-center flex-col w-1/2 gap-4" onSubmit={login}>
-          <h2 className="text-slate-900 text-5xl">Logar nessa maravilha</h2>
+          <h2 className="text-slate-900 text-5xl">Logue logue logue</h2>
           <div className="flex flex-col w-full">
             <label htmlFor="usuario">Usuário</label>
             <input
@@ -63,7 +63,7 @@ function Login() {
           </div>
           <button
             type="submit"
-            className="rounded bg-indigo-400 flex justify-center hover:bg-indigo-900 text-white w-1/2 py-2"
+            className="rounded bg-pink-400 flex justify-center hover:bg-pink-300 text-black w-1/2 py-2"
           >
             {isLoading ? (
               <RotatingLines
@@ -78,7 +78,7 @@ function Login() {
             )}
           </button>
 
-          <hr className="border-slate-800 w-full" />
+          <hr className="bg-pink-400 w-full" />
 
           <p>
             Ainda não tem uma conta? <Link to="/cadastro">Cadastre-se</Link>
