@@ -1,6 +1,6 @@
 import { useState, useEffect, type ChangeEvent, type FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
-import type Usuario from '../../models/Usuario'
+import type Usuario from '../../model/Usuario'
 import { cadastrarUsuario } from '../../services/Service'
 import { RotatingLines } from 'react-loader-spinner'
 import './Cadastro.css'
@@ -140,7 +140,7 @@ function Cadastro() {
                 hover:bg-red-700 w-1/2 py-2' 
                 onClick={retornar}
 			>
-              Cancelar
+            Cancelar
             </button>
             <button 
                 type='submit'

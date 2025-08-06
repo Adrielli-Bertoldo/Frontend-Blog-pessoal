@@ -1,24 +1,30 @@
-import { useContext } from 'react';
-
-import { Link } from 'react-router-dom';
-import { UserContext } from '../../context/UserContext';
+import ListaPostagens from "../../components/postagens/listaPostagens/ListaPostagens";
+import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem";
 
 function Home() {
-
-  const { nome } = useContext(UserContext);
-
   return (
-    <div className='container'>
-      <div>
-        <h1>Autenticar Usuário</h1>
-        <h2>Seja Bem Vinda: <span>{nome}</span></h2>
-        <Link to="/login" 
-            className="botao"
-        >
-          Voltar
-        </Link>
+    <>
+      <div className="w-full bg-sky-700 text-white font-semibold font-mono">
+        <div className="container mx-auto flex flex-col md:flex-row justify-around items-center">
+          <div className="flex flex-col justify-center">
+            <h2 className="text-center text-4xl">Seja Bem Vinde!</h2>
+            <p>Expresse aqui seus pensamentos e opniões</p>
+            <div className="flex justify-around gap-4">
+              <ModalPostagem />
+            </div>
+          </div>
+
+          <div>
+            <img
+              src="https://i.imgur.com/VpwApCU.png"
+              alt="Imagem da Página Home"
+              className="w-96"
+            />
+          </div>
+        </div>
       </div>
-    </div>
+      <ListaPostagens />
+    </>
   );
 }
 
